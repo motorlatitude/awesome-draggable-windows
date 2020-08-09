@@ -1,19 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
+    <style type="text/css">
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #222233;
+        color: #efefff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 13px;
+      }
+
+      .titlebar {
+        height: 40px;
+        width: 100%;
+      }
+
+      .content {
+        padding: 10px;
+      }
+
+      .random-box {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .draggable {
+        background: green;
+        -webkit-app-region: drag;
+        -webkit-user-select: none;
+      }
+
+      .not-draggable {
+        display: inline-block;
+        line-height: 40px;
+        width: 130px;
+        background: red;
+        -webkit-app-region: no-drag;
+        -webkit-user-select: none;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
+    <div class="titlebar draggable">
+      <div class="not-draggable">Can't drag me here</div>
+      Drag me
+    </div>
+    <div class="content">
+      <h1>Hello World!</h1>
+      We are using Node.js <span id="node-version"></span>, Chromium
+      <span id="chrome-version"></span>, and Electron
+      <span id="electron-version"></span>.
+      <div class="random-box draggable">Drag me</div>
+    </div>
     <script src="./renderer.js"></script>
   </body>
 </html>

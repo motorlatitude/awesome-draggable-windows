@@ -1,20 +1,18 @@
 {
-  "name": "electron-quick-start",
+  "name": "awesome-draggable-windows",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/motorlatitude/awesome-draggable-windows",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "demo",
+    "awesomewm"
   ],
-  "author": "GitHub",
+  "author": "Lennart Hase",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^9.1.2"
